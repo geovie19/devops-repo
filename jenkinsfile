@@ -14,13 +14,13 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/geovie19/devops-repo.git'
             }
         }
-    stage('Build Image') {
+        stage('Build Image') {
             steps {
                 script{
                     dockerImage = docker.build registry + ":$BUILD_NUMBER"
                 } 
             }
-        }
+        
         stage('Deploy image') {
             steps{
                 script{ 
@@ -29,6 +29,6 @@ pipeline {
                     }
                 }
             }
-        }  
+          
     }
 }
