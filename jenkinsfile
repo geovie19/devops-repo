@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout'){
             steps{
-                git branch: 'main', url: 'https://github.com/geovie19/devops-repo.git'
+                git branch: 'main', url: 'https://github.com/geovie19/devops-repo.git'.
             }
         }
         stage('Build Image') {
